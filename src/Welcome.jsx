@@ -1,9 +1,11 @@
-export const Welcome = ({ name }) => {
-    return (
-        <p>Welcome, <strong>{name}</strong>!</p>
-    )
-  }
+import Age from './Age';
+/*componente che ho creato prima che me lo va a mettere su Age*/
 
-  export default Welcome;
-
-  //Se la prop name è un'espressione jsx, React la considererà parte del componente.
+export const Welcome = ({ name, age}) => {
+  return (
+    <div>
+      <p>Welcome, {name} </p>
+      <Age age={age}/> 
+    </div>
+  );
+}
