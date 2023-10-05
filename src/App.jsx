@@ -6,9 +6,10 @@ import { Welcome } from './Welcome'
 
 function App() {
   return (
-   <Welcome name = "Claudia"/>
-     
+   <Welcome />    
   )
 }
 
 export default App
+
+/* se non viene passata alcuna props, react lo leggerà come undefined */
