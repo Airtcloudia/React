@@ -6,7 +6,7 @@ import { Welcome } from './Welcome'
 
 function App() {
   return (
-   <Welcome name = "Claudia"/>
+   <Welcome name = "Claudia" age="25"/>
      
   )
 }
