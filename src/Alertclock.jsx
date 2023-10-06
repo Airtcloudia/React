@@ -1,7 +1,7 @@
-const AlertClock = () => {
+const Alertclock = () => {
     const handleButtonClick = () => {
         const now = new Date()
-        alert(Sono le ${now.toLocaleTimeString()})
+        alert(`Sono le ${now.toLocaleTimeString()}`)
     }
 
     return(
@@ -11,4 +11,4 @@ const AlertClock = () => {
         </>
     )
 }
-export default AlertClock
+export default Alertclock
