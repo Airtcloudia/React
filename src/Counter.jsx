@@ -15,3 +15,6 @@ const Counter = () => {
 }
 
 export default Counter
+
+/*Quando si chiama la funzione "setter" per incrementare il contatore, il parametro deve essere una funzione o un valore immediato? Perché?
+Il parametro deve essere una funzione così da poter essere aggiornato in modo asyncrono.*/
