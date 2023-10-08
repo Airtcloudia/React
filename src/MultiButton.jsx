@@ -1,13 +1,17 @@
-const MouseClicker = () => {
+const MultiButton = () => {
     const handleButtonClick = (event) => {
         console.log(event.target.name)
     }
     return (
-        <button name="one" onClick={handleButtonClick}> <img onClick={handleButtonClick} src ="" width={24} height={24}/>Click me</button>
+        <div>
+        <button name="one" onClick={handleButtonClick}> Click me</button>
+        <button name="two" onClick={handleButtonClick}> Click me</button>
+        <button name="three" onClick={handleButtonClick}> Click me </button>
+        </div>
     )
 }
 
-export default MouseClicker
+export default MultiButton
 
 /*Com' è possibile impedire che il name attributo del pulsante venga stampato sulla console quando si fa clic sull'immagine? usando a riga 3 console.log(event.target.name)
  in modo che prende solo l'onClick di button e non tutto quello all'interno del div*/
