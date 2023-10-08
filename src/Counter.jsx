@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const Counter = () => {
-    const [count, setCount] = useState(0)
+const Counter = ({initialValue, incrementAmount}) => {
+    const [count, setCount] = useState(initialValue)
 
     const handleIncrementCounter = () =>{
-        setCount((count) => count +1)
+        setCount((count) => count +incrementAmount)
     }
     return (
         <div>
@@ -16,5 +16,3 @@ const Counter = () => {
 
 export default Counter
 
-/*Quando si chiama la funzione "setter" per incrementare il contatore, il parametro deve essere una funzione o un valore immediato? Perché?
-Il parametro deve essere una funzione così da poter essere aggiornato in modo asyncrono.*/
