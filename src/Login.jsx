@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Login = () => {
+const Login = ({stateLogin}) => {
     const [data, setData] = useState({
         username: '',
         password: '',
@@ -25,7 +25,8 @@ setData((data) => {
         <>
         <input name="username" value={data.username} onChange={handleInputChange} placeholder="username" />
         <input name="password" value={data.password} onChange={handleInputChange} placeholder="password" />
-        <input name="session" type="checkbox" checked={data.session} onChange={handleInputChange} />
+        <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputChange} />
+        <button disabled={!data.username || !data.password} onClick={stateLogin}>Login</button>
         </>
     )
 

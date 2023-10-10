@@ -7,8 +7,11 @@ import Login from './Login'
 
 
 function App() {
+  const onLogin = () => {
+    alert("You are connected")
+  }
   return (
-  <Login/>
+  <Login stateLogin={onLogin}/>
   )
 }
 
