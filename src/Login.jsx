@@ -21,12 +21,21 @@ setData((data) => {
 })
     }
 
+    const handleResetButton = () => {
+        setData({
+            username: '',
+            password: '',
+            remember: false
+        })
+    }
+
     return (
         <>
         <input name="username" value={data.username} onChange={handleInputChange} placeholder="username" />
         <input name="password" value={data.password} onChange={handleInputChange} placeholder="password" />
         <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputChange} />
         <button disabled={!data.username || !data.password} onClick={stateLogin}>Login</button>
+        <button disabled={!data.username || !data.password} onClick={handleResetButton}>Reset</button>
         </>
     )
 
