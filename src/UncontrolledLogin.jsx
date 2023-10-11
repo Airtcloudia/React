@@ -25,6 +25,15 @@ const UncontrolledLogin = () => {
 
 export default UncontrolledLogin
 
-/*Qual è l'API standard? Esistono API non standard che possono essere utilizzate per accedere ai dati del modulo?  
-l'API standard è FormData ma,
-esistono altri modi per accedere ai dati del DOM, o con useRef o document.getElementById */
+/*Tentare di accedere ai valori del modulo utilizzando l' FormData API. Quali sono i vantaggi? Quali sono gli svantaggi?
+Utilizzando la forma standard con il FormData API i vantaggi possono essere sono: 
+utilizziamo un modo semplice e intuitivo per raccogliere i dati di un modulo.
+ gestisce automaticamente i file e gli oggetti complessi (ad esempio, array o oggetti annidati),
+questa forma è supportata da tutti i browser moderni, dunque è una scelta affidabile e ovviamente compatibile.
+
+Svantaggi:
+Limitato ai moduli HTML: La FormData API è specificamente progettata per la raccolta di dati dai moduli HTML. Se devi raccogliere dati da fonti diverse, come oggetti JavaScript o API REST, 
+allora FormData non è l'opzione appropriata.
+ Per utilizzarlo, devi avere un riferimento al form HTML stesso. Se hai bisogno di raccogliere dati da elementi del DOM che non sono all'interno di un modulo, allora bisognerebbe 
+ utilizzare un metodo diverso.
+Non supporta dati personalizzati o strutture più complesse (ad esempio, oggetti JSON annidati), dovremmo fare una manipolazione aggiuntiva dei dati prima di inviarli.*/
