@@ -1,28 +1,45 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import CounterDisplay from "./CounterDisplay";
 
-
 const Counter = ({initialValue, incrementAmount, decrementAmount}) => {
-    const [count, setCount] = useState(initialValue)
+    const [count, setCount] = useState(initialValue);
+    const prevCountRef = useRef(initialValue);
+    const ref = useRef("");
 
-    const handleIncrementCounter = () =>{
-        setCount((count) => count +incrementAmount)
+    const handleCounterIncrement = () => {
+        setCount((count) => count + incrementAmount);
     }
-    const handleDecrementCounter = () => {
-        setCount((count) => count -decrementAmount)
+
+    const handleCounterDecrement = () => {
+        setCount((count) => count - decrementAmount);
     }
-    const handleResetCounter = () => {
-        setCount(initialValue)
+
+    const handleCounterReset = () => {
+        setCount(initialValue);
     }
+
+    useEffect(() => {
+        if (count > prevCountRef.current) {
+            ref.current = "up";
+        } else if (count < prevCountRef.current) {
+            ref.current = "down";
+        }
+
+       if (ref.current !== prevCountRef.current) {
+            console.log(ref.current);
+        }
+
+        prevCountRef.current = count;
+    }, [count]);
+
     return (
-        <div>
+        <>
             <CounterDisplay content={count}/>
-            <button onClick={handleIncrementCounter}>Increment</button>
-            <button onClick={handleDecrementCounter}>Decrement</button>
-            <button onClick={handleResetCounter}>Reset</button>
-        </div>
+            <button onClick={handleCounterIncrement}>Click me for increment!</button>
+            <button onClick={handleCounterDecrement}>Click me for decrement!</button>
+            <button onClick={handleCounterReset}>Click me for reset number!</button>
+        </>
     )
 }
 
-export default Counter
-
+export default Counter;
