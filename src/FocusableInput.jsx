@@ -2,13 +2,22 @@ import { useEffect } from "react";
 import { useRef } from "react";
 
 const FocusableInput = () => {
-    const inputRef=useRef (null)
+    const mountedRef = useRef(false)
+    
 
     useEffect (() => {
-        inputRef.current.focus()
+        if(!mountedRef.current){
+            mountedRef.current = true
+            console.log('Mounting for the first time')
+        } else {
+            console.log('Mountig again for debug purposes')
+        }
+       
     },[]);
+
+   
     return (
-        <input ref={inputRef} type="text" />
+        <h1>Hi,Welcome in this exercise!</h1>
     )
 }
 
