@@ -1,4 +1,5 @@
 import { useState } from "react"
+
 const TodoList = () => {
     const [items, setItems] = useState([])
     const [inputValue, setInputValue] = useState('')
@@ -10,6 +11,7 @@ const TodoList = () => {
     const handleAddItem = () => {
         if (inputValue !== '') {
           setItems([...items, inputValue]);
+          setInputValue('')
         }
     }
 
