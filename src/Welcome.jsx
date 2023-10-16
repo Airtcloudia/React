@@ -1,6 +1,8 @@
-export const Welcome = (props)=> {
-const {name} = props;
+export const Welcome = (props) => {
+    const {name} = props
 return (
-    <p>Welcome, {name}!</p>
+    <div className="welcome">
+    <p>Welcome, {name} </p>
+    </div>
 )
 }
