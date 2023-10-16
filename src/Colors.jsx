@@ -1,13 +1,13 @@
-import React from 'react';
+import Color from "./Color";
 
 const Colors = ({ items }) => {
-  return (
-    <ul>
-      {items.map((item) => (
-        <li key={item.id}>{item.name}</li>
-      ))}
-    </ul>
-  );
-}
+    return (
+      <ul>
+        {items.map((item) => (
+          <Color key={item.id} id={item.id} name={item.name} />
+        ))}
+      </ul>
+    );
+  }
 
-export default Colors;
+  export default Colors;
