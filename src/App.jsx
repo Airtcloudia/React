@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-     <Container>
+     <Container title="My name is Claudia">
       <h1>Welcome on Develhope community</h1>
      </Container>
     </>
