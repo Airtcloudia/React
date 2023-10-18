@@ -1,5 +1,5 @@
-export const Welcome = (props)=> {
-const {name} = props;
+export const Welcome = ({name})=> {
+
 return (
     <p>Welcome, {name}!</p>
 )
