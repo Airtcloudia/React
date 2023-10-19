@@ -1,17 +1,24 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LanguageContext } from "./LanguageContext";
 
 const Clock = () => {
-  const [date, setdate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
+
+  const language = useContext(LanguageContext);
 
   useEffect(() => {
     setInterval(() => {
-      setdate(new Date());
+      setDate(new Date());
     }, 1000);
   }, []);
+
   return (
-    <div>
-      <h2>The time now is: {date.toLocaleTimeString()}</h2>
-    </div>
+    <>
+      <h2>
+        {language === "en" ? "The updated time is:" : "L'ora attuale è:"}{" "}
+        {date.toLocaleTimeString()}
+      </h2>
+    </>
   );
 };
 
