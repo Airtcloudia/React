@@ -1,9 +1,10 @@
 import { useState, useContext } from "react";
 import "./App.css";
-import GitHubUser from "./GitHubUser";
+import GithubUsers from "./GithubUsers";
+
 
 function App() {
-  return <GitHubUser username={"Airtcloudia"} />;
+  return <GithubUsers />;
 }
 
 export default App;
