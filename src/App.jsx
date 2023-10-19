@@ -1,12 +1,17 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Alertclock from "./Alertclock";
+import AlertClock from "./AlertClock";
 
 function App() {
+
+  const handleButtonClick = () => {
+    const now = new Date();
+
+    alert(`Sono le ${now.toLocaleTimeString()}`);
+  };
+
   return (
     <>
-      <Alertclock />
+      <AlertClock onClickHours={handleButtonClick} />
     </>
   );
 }
