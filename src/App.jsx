@@ -1,11 +1,10 @@
 import "./App.css";
-import LoginForm from "./hooks/LoginForm";
+import GitHubUser from "./hooks/GitHubUser";
+
 
 
 const App = () => {
-    return (
-      <LoginForm/>
-    )
+  return <GitHubUser username="Airtcloudia" />;
 }
 
 export default App;
