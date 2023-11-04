@@ -1,10 +1,8 @@
 import "./App.css";
-import GitHubUsers from "./hooks/GitHubUsers";
-
-
+import LocationComponent from "./hooks/LocationComponent";
 
 const App = () => {
-  return <GitHubUsers/>;
+  return <LocationComponent/>;
 }
 
 export default App;
