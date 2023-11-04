@@ -1,10 +1,10 @@
 import "./App.css";
-import GitHubUser from "./hooks/GitHubUser";
+import GitHubUsers from "./hooks/GitHubUsers";
 
 
 
 const App = () => {
-  return <GitHubUser username="Airtcloudia" />;
+  return <GitHubUsers/>;
 }
 
 export default App;

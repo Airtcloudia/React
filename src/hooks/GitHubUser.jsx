@@ -1,23 +1,17 @@
-import useGitHubUser from "./useGitHubUser"
+import React from "react";
 
-const GitHubUser = ({username}) => {
-    const {data , error} = useGitHubUser(username)
+const GitHubUser = ({ data }) => {
+  const { login, name, avatar_url } = data;
 
-        return (
-            <div>
-              {error && <div>Error: {error.message}</div>}
-              {data && (
-                <div>
-                  <div>Username: {data.login}</div>
-                  <div>Name: {data.name}</div>
-                  <div>
-                    <img src={data.avatar_url} alt={`${data.login}'s avatar`} />
-                  </div>
-                </div>
-              )}
-            </div>
-          );
+  return (
+    <div>
+      <div>Username: {login}</div>
+      <div>Name: {name}</div>
+      <div>
+        <img src={avatar_url} alt={`${login}'s avatar`} />
+      </div>
+    </div>
+  );
+};
 
-}
-
-export default GitHubUser
+export default GitHubUser;
