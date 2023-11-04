@@ -3,8 +3,7 @@ import HookCounter from "./hooks/hookCounter";
 
 const App = () => {
     return (
-      <
-        HookCounter/>
+      <HookCounter/>
     )
 }
 
