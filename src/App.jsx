@@ -1,15 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import { Welcome } from "./Welcome";
+import { Outlet, Route, Routes } from "react-router-dom";
+import Counter from "./Counter";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Welcome name="Claudia" />} />
-      </Routes>
-    </>
-  );
+    <Routes>
+      <Route path="/counter" element={<Counter initialValue={0} incrementAmount={1} decrementAmount={1} />}/>
+    </Routes>
+
+  )
 }
 
 export default App;
