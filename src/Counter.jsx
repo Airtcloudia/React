@@ -27,11 +27,7 @@ const Counter = ({initialValue, incrementAmount, decrementAmount}) => {
     }, [count])
 
     return (
-        <div style={{
-            backgroundColor:"green",
-            borderRadius:"10px",
-            width:"fit-content"
-           }}>
+        <div>
         <CounterDisplay content={count}/>
         <button onClick={handleCounterIncrement}>Click me for increment!</button>
         <button onClick={handleCounterDecrement}>Click me for decrement!</button>
