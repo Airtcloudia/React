@@ -3,23 +3,26 @@ import ShowGithubUser from "./ShowGithubUser";
 import { Welcome } from "./Welcome";
 import Counter from "./Counter";
 import NotFound from "./NotFound";
+import GithubUserList from "./assets/GitHubUserList";
 
-function App() {
+const App = () => {
   return (
     <>
-    <nav className="flex-row gap-10" >
-      <Link to="/" element={<Welcome/>}>Home</Link>
-      <Link to="/users/:username" element={<ShowGithubUser/>}>ShowGithubUser</Link>
-      <Link to="/counter" element={<Counter/>}>Counter</Link>
-    </nav>
-    <Routes>
-       <Route path="*" element={<NotFound />} />
-       <Route exact path="/" element={<Welcome name="Claudia"/>} />
-       <Route path="/users/:username" element={<ShowGithubUser/>}/>
-       <Route path="/counter" element={<Counter/>}/>
-    </Routes>
+      <nav>
+        <Link to='/'>Home</Link>
+        <Link to='/counter'>Counter</Link>
+        <Link to='/users'>GithubUser</Link>
+      </nav>
+      <Routes>
+        <Route path="*" element={<NotFound/>} />
+        <Route path="/" element={<Welcome name="User"/>} />
+        <Route path="/counter" element={<Counter />}/>
+        <Route path="/users" element={<GithubUserList/>}>
+          <Route path=":username" element={<ShowGithubUser/>} />
+        </Route>
+      </Routes>
     </>
-  );
+  )
 }
 
 export default App;
