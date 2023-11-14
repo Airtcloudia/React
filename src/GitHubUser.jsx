@@ -1,9 +1,8 @@
-import useGithubUser from "./useGithubuser";
-
+import useGithubUser from "./useGithubUser";
 
 const GitHubUser = ({ username }) => {
    const API_URL = `https://api.github.com/users/${username}`;
-   const {data, error} = useGithubUser(API_URL)
+   const {data, error} = useGithubUser(API_URL, username)
 
 
   return (
